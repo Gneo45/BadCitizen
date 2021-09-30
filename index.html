@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+
+        <h1 class="gameTitle">BAD CITIZEN</h1>
+
+        <h2 class="choixHeros">Choisissez votre héros!</h2>
+
+        <div class="name-container ">
+            <h2 class="player-charactere-name invisible">nom hero</h2>
+            <h2 class="enemy-charactere-name invisible">nom enemie</h2>
+        </div>
+
+        <div class="hpCount invisible">
+            <div class="hpPlayer">
+                <span class="currentPlayerHP invisible">100</span>
+                <span class="playerMaxHP invisible">/100</span>
+
+            </div>
+            <div class="enemyHP">
+                <span class="currentEnemyHP invisible">100</span>
+                <span class="enemyMaxHP invisible">/100</span>
+
+            </div>
+        </div>
+        <div class="spCount invisible">
+            <div class="spPlayer">
+                <span class="currentPlayerSP invisible">100</span>
+                <span class="playerMaxSP invisible">/100</span>
+            </div>
+            <div class="spEnemy">
+                <span class="currentEnemySP invisible">100</span>
+                <span class="enemyMaxSP invisible">/100</span>
+            </div>
+        </div>
+
+        <div class="bar-container ">
+            <div class="player-bar invisible">
+                <div class="hp-player invisible"></div>
+                <div class="sp-player invisible"></div>
+            </div>
+            <div class="enemy-bar invisible">
+                <div class="hp-enemy invisible"></div>
+                <div class="sp-enemy invisible"></div>
+
+            </div>
+        </div>
+
+        <div class="phasetext invisible">
+
+            <h1>Ready</h1>
+        </div>
+
+        <div class="startGame">
+            <button class="startGameBtn-Btn delete">Combattre!</button>
+        </div>
+
+        <div class="charactere-container delete">
+            <div class="player invisible animation"></div>
+            <div class="enemy invisible animation"></div>
+
+        </div>
+
+        <div class="attack-container  ">
+            <div class="player-attack invisible">
+                <button id="matraque" class="attack-btn attack1">matraque</button>
+                <button id="molotov" class="attack-btn attack2">molotov</button>
+                <button id="cracha" class="attack-btn attack3">cracha</button>
+            </div>
+
+            <div class="enemy-attack invisible delete">
+                <button id="enemyAttack1" class="attack-btn attack1" disabled>attack1</button>
+                <button id="enemyAttack2" class="attack-btn attack2" disabled>attack1</button>
+                <button id="enemyAttack3" class="attack-btn attack3" disabled>attack1</button>
+            </div>
+        </div>
+
+        <div class="commentary">
+
+            <h2 id="currentattack" class="invisible"></h2>
+            <p id="commentary" class="invisible"></p>
+        </div>
+
+        <div class="character-selection">
+            <div id="0" class="hero1-face Selection">
+                <p class="heroName">Knight</p>
+            </div>
+            <div id="1" class="hero2-face Selection">
+                <p class="heroName">Grandpa</p>
+            </div>
+            <div id="2" class="hero3-face Selection">
+                <p class="heroName">Student</p>
+            </div>
+            <div id="3" class="hero4-face Selection">
+                <p class="heroName">Evan</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

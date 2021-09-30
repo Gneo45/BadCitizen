@@ -1,0 +1,287 @@
+    /*-------------------------------------------------PAGE----------------------------------------------*/
+    
+    @import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: #333;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        color: white;
+    }
+    /*----------------------------------APP GENERALE--------------------------------------*/
+    
+    .app {
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        background-image: url(background3.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: solid 2px blanchedalmond;
+        border-radius: 25px;
+        top: 40%;
+        left: 50%;
+        min-width: 75vw;
+        max-width: 75vw;
+        min-height: 70vh;
+        max-height: 70vh;
+        transform: translate(-50%, -40%);
+        padding: 40px;
+        padding-top: 80px;
+    }
+    
+    .delete {
+        display: none;
+    }
+    /*------------------------------UI----------------------------------------*/
+    
+    .gameTitle {
+        text-align: center;
+        font-size: 4.5rem;
+        font-family: 'Palette Mosaic', cursive;
+        color: red;
+    }
+    
+    .choixHeros {
+        position: absolute;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 196, 0);
+    }
+    
+    .name-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .startGame {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 30%;
+    }
+    
+    .startGameBtn-Btn,
+    .nextGameBtn,
+    .Restart {
+        padding: 15px 20px;
+        border: 1px solid rgb(78, 32, 32);
+        margin-top: 100px;
+        border-radius: 15px;
+        background-color: red;
+        color: white;
+        font-size: 1.2em;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    
+    .character-selection {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        transform: translateY(-10%);
+    }
+    
+    .heroName {
+        position: relative;
+        bottom: 20px;
+        justify-content: space-around;
+        text-align: center;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        background-color: rgba(255, 0, 0, 0.472);
+    }
+    
+    .Selection {
+        position: relative;
+        height: 105px;
+        width: 105px;
+        margin: 50px;
+        background-color: white;
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-color: rgba(192, 192, 192, 0.465);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: rgba(58, 58, 57, 0.459) 0px 10px 30px -10px;
+        cursor: pointer;
+    }
+    
+    .hero1-face {
+        background-image: url(Knight.png);
+    }
+    
+    .hero2-face {
+        background-image: url(AngryGrandpa.png);
+    }
+    
+    .hero3-face {
+        background-image: url(hero4.png);
+    }
+    
+    .hero4-face {
+        background-image: url(Travailleur.png);
+    }
+    /*--------------Player STATS -----------------------*/
+    
+    .bar-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .hpCount {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    
+    .playerMaxHP {
+        margin-right: 150px;
+    }
+    
+    .player-bar {
+        height: 10px;
+        width: 200px;
+        background-color: red;
+        z-index: 1;
+    }
+    
+    .hp-player {
+        width: 100%;
+        height: 10px;
+        background-color: green;
+    }
+    /*--------------ENEMY STATS------------------------*/
+    
+    .enemy-bar {
+        height: 10px;
+        width: 200px;
+        background-color: red;
+    }
+    
+    .hp-enemy {
+        width: 100%;
+        height: 10px;
+        background-color: green;
+    }
+    /*-----------------------AFFICHAGE----------------------*/
+    
+    .phasetext {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 3rem;
+        margin-top: 20px;
+        color: red;
+    }
+    
+    .commentary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    
+    h2 {
+        margin: 0;
+        padding: 0;
+    }
+    /*   .invisible {
+        opacity: 0;
+    }*/
+    /*--------------------PLAYER ------------------------*/
+    
+    .charactere-container {
+        background-color: rgba(0, 0, 0, 0.931);
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-around;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: solid 1px red;
+        border-bottom: 20px solid rgb(77, 76, 76);
+        height: 200px;
+    }
+    
+    .player {
+        background-image: url(hero4.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: transparent;
+        width: 200px;
+        height: 150px;
+        margin-right: -50px;
+        margin-top: auto;
+        align-self: flex-end;
+    }
+    /* .delete {
+        display: none;
+    } */
+    
+    .enemy {
+        background-image: url(explosion.gif);
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        height: 150px;
+        width: 200px;
+        border-radius: 35px;
+    }
+    
+    .attack-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .attack-btn {
+        padding: 10px;
+    }
+    /*--------------------ENEMY ------------------------*/
+    /*-------------------------AIMATION------------------------------*/
+    
+    .animation {
+        animation: stancemove 500ms ease infinite;
+        transition: 200ms;
+    }
+    
+    .dead {
+        background-image: url(explosion.gif);
+        background-size: cover;
+        background-position: center;
+        background-color: transparent;
+        width: 150px;
+        height: 150px;
+        margin-right: -50px;
+    }
+    
+    @keyframes stancemove {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-10px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
